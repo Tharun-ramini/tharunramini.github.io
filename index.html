@@ -1,233 +1,758 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ramini Tharun</title>
+    <title>Tharun Ramini – Python Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="#">Ramini Tharun</a>
-        </div>
+    <!-- ═══════════════════════════════════════
+     HEADER / NAV
+═══════════════════════════════════════ -->
+    <header>
+      <a href="#" class="logo">T<span>.</span>Ramini</a>
 
-        <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="nav-pills">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="mailto:raminitharun@gmail.com" class="header-cta">Hire Me</a>
+
+      <button class="hamburger" id="ham" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
 
-    <!-- Home Section -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1 class="hero-greeting">Hi, I’m Ramini Tharun</h1>
-          <h2 class="hero-title">
-            <span class="highlight">MCA Student</span> | Full Stack Developer
-          </h2>
-          <hr class="hero-divider" />
-          <p class="hero-description">
-            Aspiring software developer skilled in Python, Django, React, and AI
-            applications. Passionate about building impactful and innovative
-            solutions.
-          </p>
-          <div class="hero-buttons">
-            <a href="images/resume.pdf" download class="btn-download"
-              >Download Resume</a
-            >
-            <a
-              href="https://github.com/Tharun-ramini"
-              target="_blank"
-              class="btn-github"
-              >View GitHub</a
-            >
-          </div>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#projects" onclick="closeMobile()">Projects</a>
+      <a href="#education" onclick="closeMobile()">Education</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+    <section class="hero">
+      <!-- Decorative background blobs -->
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+
+      <!-- Left: Text Content -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">Open to Internship &amp; Full-time Roles</div>
+
+        <h1 class="hero-headline">
+          Python<br />
+          <span class="line-accent">Full Stack</span>
+          <span class="line-outline">Developer.</span>
+        </h1>
+
+        <div class="hero-role-row">
+          <div class="role-divider"></div>
+          <span class="hero-role" id="typed-text">Django · React · MySQL</span>
+          <span class="typed-cursor"></span>
         </div>
 
-        <div class="hero-image">
-          <img src="images/20240108_112616~2.jpg" alt="Ramini Tharun" />
-        </div>
-      </div>
-    </section>
-
-    <!-- About section -->
-
-    <section class="about-section" id="about">
-      <div class="divider-container">
-        <h2 class="section-title">About Me</h2>
-      </div>
-
-      <div class="about-content">
-        <p class="about-text">
-          I am an <strong>MCA Student</strong> with hands-on experience in full
-          stack web development using
-          <strong>Python, Django, React, and Ai- powered applications</strong>
-          and an actively seeking internship or fresher opportunities in
-          software development.
+        <p class="hero-bio">
+          Aspiring developer with a flair for building
+          <strong>intelligent web solutions</strong>. Proficient in
+          <strong>Python, Django &amp; React</strong>, with hands-on experience
+          in <strong>NLP</strong> and <strong>n8n automation</strong> pipelines.
+          Ready to contribute and grow in a fast-paced tech team.
         </p>
 
-        <div class="about-tech-highlights">
-          <div class="tech-item">
-            <img src="images/icons8-python-48.png" alt="Python & Django" />
-            <span>Python & Django</span>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num"><span class="g">2</span></span>
+            <span class="stat-label">Live Projects</span>
           </div>
-
-          <div class="tech-item">
-            <img src="images/react.png" alt="React & JS" />
-            <span>React & JavaScript</span>
+          <div class="stat-item">
+            <span class="stat-num"><span class="g">87</span>%</span>
+            <span class="stat-label">BCA Score</span>
           </div>
-
-          <div class="tech-item">
-            <img src="images/icons8-database-50.png" alt="Database" />
-            <span>Database Management</span>
+          <div class="stat-item">
+            <span class="stat-num"><span class="g">8</span>+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num"><span class="g">∞</span></span>
+            <span class="stat-label">Drive to Learn</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-      <div class="divider-container">
-        <h2 class="section-title">My Projects</h2>
-      </div>
+        <div class="hero-actions">
+          <a href="mailto:raminitharun@gmail.com" class="btn-primary"
+            >Get In Touch →</a
+          >
+          <a
+            href="https://github.com/Tharun-ramini"
+            target="_blank"
+            class="btn-ghost"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://linkedin.com/in/tharunramini"
+            target="_blank"
+            class="btn-ghost"
+            >LinkedIn ↗</a
+          >
+        </div>
 
-      <div class="projects-container">
-        <div class="project-card">
-          <div class="project-header resume-bg">
-            <h3>ATS Resume Matcher</h3>
+        <div class="scroll-hint">
+          <div class="scroll-line"></div>
+          Scroll to explore
+        </div>
+      </div>
+      <!-- /hero-left -->
+
+      <!-- Right: Photo + Profile Cards -->
+      <div class="hero-right">
+        <!-- Photo Card -->
+        <div class="photo-card">
+          <div class="photo-frame">
+            <div class="photo-placeholder" id="photoPlaceholder">
+              <div class="photo-initials-ring">TR</div>
+              <span class="photo-caption">Ramini Tharun</span>
+            </div>
+            <!-- Actual photo shown after upload -->
+            <img
+              id="heroPhoto"
+              src=""
+              alt="Tharun Ramini"
+              style="
+                display: none;
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
+            />
+            <!-- Upload trigger -->
+            <label class="photo-upload-hint" for="photoUpload"
+              >📷 Add Photo</label
+            >
+            <input
+              type="file"
+              id="photoUpload"
+              accept="image/*"
+              style="display: none"
+            />
           </div>
-          <div class="project-body">
-            <p>
-              AI-powered tool to analyze and optimize resumes for job matching.
-            </p>
-            <div class="project-buttons">
-              <!-- <a href="#" class="btn btn-primary">Live Demo</a> -->
-              <a
-                href="https://github.com/Tharun-ramini/resume-analyzer-ai"
-                class="btn btn-outline"
-                >GitHub Code</a
-              >
+          <div class="photo-info">
+            <div>
+              <div class="photo-name">Ramini Tharun</div>
+              <div class="photo-role-small">Python Full Stack Dev</div>
+            </div>
+            <div class="avail-pill">
+              <div class="avail-dot"></div>
+              Available
             </div>
           </div>
         </div>
+        <!-- /photo-card -->
 
-        <div class="project-card">
-          <div class="project-header travel-bg">
-            <h3>Travel Guide App</h3>
+        <!-- Profile Info Card -->
+        <div class="profile-card">
+          <div class="profile-info">
+            <div class="info-row">
+              <div class="info-icon">📍</div>
+              <span>Hyderabad, Telangana</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📧</div>
+              <span>raminitharun@gmail.com</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">📱</div>
+              <span>+91 8639188088</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🎓</div>
+              <span>MCA – Pursuing (2025–2027)</span>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">💻</div>
+              <span>github.com/Tharun-ramini</span>
+            </div>
           </div>
-          <div class="project-body">
-            <p>Travel guide app</p>
-            <div class="project-buttons">
-              <!-- <a href="#" class="btn btn-primary">Live Demo</a> -->
-              <a href="#" class="btn btn-outline">GitHub Code</a>
+        </div>
+        <!-- /profile-card -->
+      </div>
+      <!-- /hero-right -->
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     ABOUT / PHOTO SECTION
+═══════════════════════════════════════ -->
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <!-- Photo Column -->
+        <div class="about-photo-wrap reveal-left">
+          <div class="about-photo-main">
+            <div class="about-initials" id="aboutInitials">
+              <div class="about-initials-circle">TR</div>
+              <div class="about-initials-name">Ramini Tharun</div>
+              <div class="about-initials-role">Full Stack Developer</div>
+            </div>
+            <!-- Synced from upload -->
+            <img
+              id="aboutPhoto"
+              src=""
+              alt="Tharun Ramini"
+              style="
+                display: none;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                inset: 0;
+              "
+            />
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge fb-top-right">
+            <span class="fb-icon">🏆</span>
+            <div class="fb-text">
+              <strong>87%</strong>
+              <span>BCA Score</span>
+            </div>
+          </div>
+          <div class="floating-badge fb-bottom-left">
+            <span class="fb-icon">⚡</span>
+            <div class="fb-text">
+              <strong>n8n AI</strong>
+              <span>Automation</span>
+            </div>
+          </div>
+        </div>
+        <!-- /about-photo-wrap -->
+
+        <!-- Text Column -->
+        <div class="about-right reveal-right">
+          <div>
+            <div class="section-kicker">Who I Am</div>
+            <h2 class="about-headline">
+              Passionate coder,<br />
+              <em>problem solver.</em>
+            </h2>
+          </div>
+
+          <p class="about-bio">
+            I'm <strong>Ramini Tharun</strong>, an aspiring Python Full Stack
+            Developer currently pursuing my MCA from AVIH Engineering College,
+            Hyderabad. I love turning complex ideas into
+            <strong>clean, intelligent web applications</strong> using Django,
+            React, and modern tooling.
+          </p>
+
+          <p class="about-bio">
+            My recent work spans
+            <strong>NLP-powered resume analysis</strong> and
+            <strong>AI-driven travel guides</strong>, demonstrating my drive to
+            build meaningful, real-world products. I'm always eager to learn,
+            collaborate, and deliver.
+          </p>
+
+          <div class="trait-list">
+            <div class="trait-item">
+              <div class="trait-icon">🧩</div>
+              <div class="trait-text">
+                <strong>Problem Solver</strong>
+                <span
+                  >Breaking down complex challenges into clean, efficient
+                  solutions</span
+                >
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-icon">🤝</div>
+              <div class="trait-text">
+                <strong>Team Collaborator</strong>
+                <span
+                  >Thrives in cross-functional teams, communicates clearly</span
+                >
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-icon">📚</div>
+              <div class="trait-text">
+                <strong>Continuous Learner</strong>
+                <span
+                  >Actively exploring AI agents, n8n automation and beyond</span
+                >
+              </div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-icon">⏱️</div>
+              <div class="trait-text">
+                <strong>Time Management</strong>
+                <span
+                  >Delivers on time with attention to quality and detail</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /about-right -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     TECHNICAL EXPERTISE
+═══════════════════════════════════════ -->
+    <section id="skills" class="skills-section">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-kicker">What I Know</div>
+          <h2 class="section-title">
+            Technical <span class="italic">Expertise</span>
+          </h2>
+          <p class="section-sub">
+            A broad and growing stack — from frontend interfaces to backend
+            APIs, databases, and AI automation pipelines.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skill-tabs reveal">
+          <button class="skill-tab active" data-tab="all">All Skills</button>
+          <button class="skill-tab" data-tab="frontend">Frontend</button>
+          <button class="skill-tab" data-tab="backend">Backend</button>
+          <button class="skill-tab" data-tab="tools">Tools &amp; DB</button>
+        </div>
+
+        <div class="skills-grid-main">
+          <!-- Left: Proficiency Bars -->
+          <div class="reveal">
+            <div class="skill-group-title">Proficiency Levels</div>
+            <div class="skill-bar-row" id="skillBars">
+              <div class="skill-bar-item" data-cat="backend">
+                <div class="skill-bar-top">
+                  <span class="skill-name">Python</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-expert">Expert</span>
+                    <span class="skill-pct">85%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 85%; --d: 0.1s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="backend">
+                <div class="skill-bar-top">
+                  <span class="skill-name">Django (REST Framework)</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-advanced">Advanced</span>
+                    <span class="skill-pct">80%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 80%; --d: 0.2s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="frontend">
+                <div class="skill-bar-top">
+                  <span class="skill-name">React.js</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-advanced">Advanced</span>
+                    <span class="skill-pct">75%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 75%; --d: 0.3s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="frontend">
+                <div class="skill-bar-top">
+                  <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-expert">Expert</span>
+                    <span class="skill-pct">82%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 82%; --d: 0.4s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="tools">
+                <div class="skill-bar-top">
+                  <span class="skill-name">MySQL</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-advanced">Advanced</span>
+                    <span class="skill-pct">78%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 78%; --d: 0.5s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="tools">
+                <div class="skill-bar-top">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-advanced">Advanced</span>
+                    <span class="skill-pct">75%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 75%; --d: 0.6s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="tools">
+                <div class="skill-bar-top">
+                  <span class="skill-name">n8n Automation</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-intermediate"
+                      >Intermediate</span
+                    >
+                    <span class="skill-pct">65%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 65%; --d: 0.7s"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar-item" data-cat="backend">
+                <div class="skill-bar-top">
+                  <span class="skill-name">NLP / REST APIs</span>
+                  <div class="skill-meta">
+                    <span class="skill-level level-intermediate"
+                      >Intermediate</span
+                    >
+                    <span class="skill-pct">68%</span>
+                  </div>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" style="width: 68%; --d: 0.8s"></div>
+                </div>
+              </div>
+            </div>
+            <!-- /skillBars -->
+          </div>
+
+          <!-- Right: Technology Chips -->
+          <div class="reveal">
+            <div class="skill-group-title">All Technologies</div>
+
+            <div class="skill-category-block" data-cat="frontend">
+              <div class="scat-header">
+                <div class="scat-icon fe">🎨</div>
+                <span class="scat-name">Frontend Development</span>
+              </div>
+              <div class="tech-chips">
+                <span class="chip hi">React.js</span>
+                <span class="chip hi">JavaScript (ES6+)</span>
+                <span class="chip">HTML5</span>
+                <span class="chip">CSS3</span>
+                <span class="chip">Responsive Design</span>
+              </div>
+            </div>
+
+            <div class="skill-category-block" data-cat="backend">
+              <div class="scat-header">
+                <div class="scat-icon be">⚙️</div>
+                <span class="scat-name">Backend Development</span>
+              </div>
+              <div class="tech-chips">
+                <span class="chip hi">Python</span>
+                <span class="chip hi">Django</span>
+                <span class="chip">Django REST Framework</span>
+                <span class="chip">REST APIs</span>
+                <span class="chip">NLP</span>
+              </div>
+            </div>
+
+            <div class="skill-category-block" data-cat="tools">
+              <div class="scat-header">
+                <div class="scat-icon db">🗄️</div>
+                <span class="scat-name">Database &amp; Storage</span>
+              </div>
+              <div class="tech-chips">
+                <span class="chip hi">MySQL</span>
+                <span class="chip">DBMS</span>
+                <span class="chip">SQL Queries</span>
+              </div>
+            </div>
+
+            <div class="skill-category-block" data-cat="tools">
+              <div class="scat-header">
+                <div class="scat-icon tools">🔧</div>
+                <span class="scat-name">Tools &amp; Platforms</span>
+              </div>
+              <div class="tech-chips">
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip hi">n8n</span>
+                <span class="chip">VS Code</span>
+                <span class="chip">Postman</span>
+              </div>
+            </div>
+
+            <div class="skill-category-block">
+              <div class="scat-header">
+                <div class="scat-icon concepts">🧠</div>
+                <span class="scat-name">Core Concepts</span>
+              </div>
+              <div class="tech-chips">
+                <span class="chip">OOP</span>
+                <span class="chip">Data Structures</span>
+                <span class="chip">DBMS</span>
+                <span class="chip">AI Agents</span>
+                <span class="chip">PDF/DOCX Parsing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /skills-grid-main -->
+
+        <!-- Highlight Cards Row -->
+        <div class="skill-highlight-row reveal">
+          <div class="skill-highlight-card">
+            <span class="shc-emoji">🐍</span>
+            <div class="shc-name">Python Backend</div>
+            <div class="shc-desc">
+              Django &amp; DRF for scalable REST APIs and server-side logic
+            </div>
+          </div>
+          <div class="skill-highlight-card">
+            <span class="shc-emoji">⚛️</span>
+            <div class="shc-name">React Frontend</div>
+            <div class="shc-desc">
+              Component-based UIs with modern React patterns and hooks
+            </div>
+          </div>
+          <div class="skill-highlight-card">
+            <span class="shc-emoji">🤖</span>
+            <div class="shc-name">AI &amp; NLP</div>
+            <div class="shc-desc">
+              NLP pipelines for text extraction and intelligent processing
+            </div>
+          </div>
+          <div class="skill-highlight-card">
+            <span class="shc-emoji">🔗</span>
+            <div class="shc-name">n8n Automation</div>
+            <div class="shc-desc">
+              Workflow automation and AI agent integration using n8n
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section" id="skills">
-      <div class="divider-container">
-        <h2 class="section-title">Skills</h2>
+    <!-- ═══════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════ -->
+    <section id="projects" class="projects-section">
+      <div style="max-width: 1280px; margin: 0 auto">
+        <div class="reveal">
+          <div class="section-kicker">What I've Built</div>
+          <h2 class="section-title">
+            Featured <span class="italic">Projects</span>
+          </h2>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <span class="project-index">01</span>
+            <h3 class="project-title">
+              AI-Powered ATS Resume Matcher &amp; Optimizer
+            </h3>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Django</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">NLP</span>
+              <span class="stack-tag">PDF/DOCX</span>
+            </div>
+            <ul class="project-points">
+              <li>
+                Full-stack web app comparing resumes with job descriptions and
+                generating ATS compatibility scores
+              </li>
+              <li>
+                NLP pipeline extracting skills, education and experience from
+                PDF/DOCX documents
+              </li>
+              <li>
+                Keyword-based suggestions to improve resume-job matching
+                accuracy
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-card reveal">
+            <span class="project-index">02</span>
+            <h3 class="project-title">AI Travel Guide Web Application</h3>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Django</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">AI</span>
+              <span class="stack-tag">Mobile-first</span>
+            </div>
+            <ul class="project-points">
+              <li>
+                Mobile-first app generating personalised travel guides for
+                global destinations
+              </li>
+              <li>
+                AI-driven itinerary generation with best times, routes and local
+                attractions
+              </li>
+              <li>
+                Conversational interface for interactive, customised destination
+                exploration
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon-wrapper">
-            <img
-              src="images/icons8-frontend-64.png"
-              alt="Frontend"
-              class="skill-icon"
-            />
+    <!-- ═══════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════ -->
+    <section id="education" class="edu-section">
+      <div class="edu-inner">
+        <div class="reveal">
+          <div class="section-kicker" style="color: var(--green-mid)">
+            Academic Background
           </div>
-          <h3>Frontend</h3>
-          <p>HTML, CSS, React</p>
+          <h2 class="section-title" style="color: #fff">
+            Education &amp;
+            <span class="italic" style="color: var(--green-mid)">Learning</span>
+          </h2>
         </div>
 
-        <div class="skill-card">
-          <div class="skill-icon-wrapper">
-            <img
-              src="images/icons8-python-48.png"
-              alt="Backend"
-              class="skill-icon"
-            />
+        <div class="edu-grid">
+          <div class="edu-card reveal">
+            <div class="edu-badge">🎓 Currently Pursuing</div>
+            <div class="edu-degree">Master of Computer Applications (MCA)</div>
+            <div class="edu-school">AVIH Engineering College · 2025–2027</div>
+            <div class="edu-detail">Key coursework:</div>
+            <div class="course-chips">
+              <span class="course-chip">OOP</span>
+              <span class="course-chip">n8n AI Agents</span>
+              <span class="course-chip">Web Development</span>
+              <span class="course-chip">Database Management</span>
+            </div>
           </div>
-          <h3>Backend</h3>
-          <p>Python, Django</p>
-        </div>
 
-        <div class="skill-card">
-          <div class="skill-icon-wrapper">
-            <img
-              src="images/icons8-database-50.png"
-              alt="Database"
-              class="skill-icon"
-            />
+          <div class="edu-card reveal">
+            <div class="edu-badge">✅ Completed 2025</div>
+            <div class="edu-degree">
+              Bachelor of Computer Applications (BCA)
+            </div>
+            <div class="edu-school">Osmania University</div>
+            <div class="edu-detail">Overall percentage achieved</div>
+            <span class="edu-percent">87%</span>
           </div>
-          <h3>Database</h3>
-          <p>MySQL</p>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-icon-wrapper">
-            <img
-              src="images/icons8-github-48.png"
-              alt="Tools"
-              class="skill-icon"
-            />
-          </div>
-          <h3>Tools</h3>
-          <p>Git, GitHub,</p>
         </div>
       </div>
     </section>
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-item">
-          <img src="images/email.png" alt="email icon" class="contact-icon" />
-          <p>raminitharun@gmail.com</p>
-        </div>
-        <div class="contact-item">
-          <img
-            src="images/icons8-linkedin-48.png"
-            alt="linkedin icon"
-            class="contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/tharunramini/" target="_blank"
-              >linkedin.com/in/tharunramini/</a
-            >
+
+    <!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+    <section id="contact" class="contact-section">
+      <div class="contact-inner">
+        <div class="reveal">
+          <div class="section-kicker">Let's Connect</div>
+          <h2 class="contact-headline">Ready to<br /><em>hire me?</em></h2>
+          <p class="contact-sub">
+            I'm actively seeking internship and full-time opportunities in
+            Python full stack development. Let's build something great together!
           </p>
+          <a
+            href="mailto:raminitharun@gmail.com"
+            class="btn-primary"
+            style="font-size: 14px; padding: 16px 36px"
+          >
+            Send Me an Email →
+          </a>
         </div>
-        <div class="contact-item">
-          <img
-            src="images/icons8-github-48.png"
-            alt="github icon"
-            class="contact-icon"
-          />
-          <p>
-            <a href="https://github.com/Tharun-ramini" target="_blank"
-              >github.com/Tharun-ramini</a
-            >
-          </p>
+
+        <div class="contact-cards reveal">
+          <a href="mailto:raminitharun@gmail.com" class="contact-card">
+            <div class="cc-icon">✉️</div>
+            <div>
+              <div class="cc-label">Email</div>
+              <div class="cc-value">raminitharun@gmail.com</div>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
+          <a href="tel:8639188088" class="contact-card">
+            <div class="cc-icon">📱</div>
+            <div>
+              <div class="cc-label">Phone</div>
+              <div class="cc-value">+91 8639188088</div>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
+          <a
+            href="https://linkedin.com/in/tharunramini"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="cc-icon">💼</div>
+            <div>
+              <div class="cc-label">LinkedIn</div>
+              <div class="cc-value">linkedin.com/in/tharunramini</div>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
+          <a
+            href="https://github.com/Tharun-ramini"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="cc-icon">🐙</div>
+            <div>
+              <div class="cc-label">GitHub</div>
+              <div class="cc-value">github.com/Tharun-ramini</div>
+            </div>
+            <div class="cc-arrow">→</div>
+          </a>
         </div>
-      </div>
-      <div class="social-links-footer">
-        <a href="#"> <img src="images/twitter.png" alt="twitter" /></a>
-        <a href="#">
-          <img src="images/icons8-linkedin-48.png" alt="linkedin"
-        /></a>
-        <a href="#"> <img src="images/icons8-github-48.png" alt="github" /></a>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+    <footer>
+      <div>© 2025 Ramini Tharun · Hyderabad, Telangana</div>
+      <div>Python Full Stack Developer · Open to Work</div>
+    </footer>
+
+    <!-- JavaScript (loaded last for performance) -->
+    <script src="script.js"></script>
   </body>
 </html>
